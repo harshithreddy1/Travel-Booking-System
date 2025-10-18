@@ -3,20 +3,29 @@ version: '3.6'
 services:
   travel-app:
     build: .
-    container_name: travel-system
+    container_name: harshith-reddy
     ports:
       - "4555:4000"
     environment:
-      - MONGODB_URI=mongodb://localhost:27017/travelEas
+      - MONGODB_URI=mongodb://mongodb:27017/travelEas
     depends_on:
       - mongodbs
+    networks:
+      - harshith  
 
   mongodbs:
     image: mongo:latest
+    container_name: harshith-mongodb
     ports:
       - 27000:27017
     volumes:
       - travel-data:/data/db 
+    networks:
+      - harshith
 
 volumes:
   travel-data:
+
+networks:
+  harshith:
+    driver: bridge
