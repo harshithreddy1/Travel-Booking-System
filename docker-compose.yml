@@ -1,0 +1,21 @@
+version: "3.6"
+
+services:
+  app:
+    image: harshithreddy628/travel-booking-system:v1.0
+    ports:
+      - "4444:4000"
+    environment:
+      MONGODB_URI: mongodb://mongodb:27017/travelEas
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:7.0
+    ports:
+      - "27000:27017"
+    volumes:
+      - harshith-data:/data/db
+
+volumes:
+  harshith-data:
