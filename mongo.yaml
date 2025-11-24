@@ -25,9 +25,9 @@ kind: Service
 metadata:
   name: mongo-svc
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: mongo
   ports:
-    - port: 27018
+    - port: 27017
       targetport: 27017
