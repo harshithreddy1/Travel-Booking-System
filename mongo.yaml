@@ -28,5 +28,5 @@ spec:
   selector:
     app: mongo
   ports:
-    - port: 27017
+    - port: 27018
       targetport: 27017
