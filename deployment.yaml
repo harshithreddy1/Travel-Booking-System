@@ -15,6 +15,7 @@ spec:
       containers:
         - name: travel-cont 
           image: harshithreddy628/travel-booking-system:v1.0
+          imagePullPolicy: Always
           ports:
             - containerPort: 4000
           env:
