@@ -16,7 +16,7 @@ spec:
         - name: mongo-cont 
           image: mongo:latest
           ports:
-            containerPort: 27017
+            - containerPort: 27017
 
 --- 
 
@@ -30,4 +30,3 @@ spec:
   ports:
     - port: 27017
       targetport: 27017
-      
