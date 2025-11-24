@@ -17,6 +17,9 @@ spec:
           image: harshithreddy628/travel-booking-system:v1.0
           ports:
             - containerPort: 4000
+          env:
+            - name: MONGODB_URI
+              value: "mongodb://mongo-svc:27017/travelEas"
 
 --- 
 
