@@ -25,6 +25,7 @@ kind: Service
 metadata:
   name: mongo-svc
 spec:
+  type: LoadBalancer
   selector:
     app: mongo
   ports:
