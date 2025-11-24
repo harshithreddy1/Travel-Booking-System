@@ -7,7 +7,7 @@ services:
     ports:
       - "4555:4000"
     environment:
-      - MONGODB_URI=mongodb://mongodb:27017/travelEas
+      - MONGODB_URI=mongodb://mongodbs:27017/travelEas
     depends_on:
       - mongodbs
     networks:
@@ -15,7 +15,6 @@ services:
 
   mongodbs:
     image: mongo:latest
-    container_name: harshith-mongodb
     ports:
       - 27000:27017
     volumes:
